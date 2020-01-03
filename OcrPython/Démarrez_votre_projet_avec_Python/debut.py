@@ -7,3 +7,22 @@ print(quote)
 print(my_dic["paris"])
 print(prog["quote"])
 print(prog["character"])
+
+
+def capitalize(words):
+    for word in words:
+        word.capitalize()
+
+def message(character, quote):
+    capitalize(character)
+    capitalize(quote)
+    message = "{} a dit {}".format(character, quote)
+    return message
+
+
+
+#Program!!!
+user_answer = input("Tapez entrer pour connaitre une autre citaion ou B pour quitterle programme.")
+while user_answer != "B":
+    print(message(get_random_item(characters), get_random_character()))
+    user_answer = input("Tapez entrer pour connaitre une autre citaion ou B pour quitterle programme.")
